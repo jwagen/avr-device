@@ -1,1 +1,292 @@
 _svd: ../svd/avr64du32.svd
+
+_include:
+  - "common/usb_fscore_avr_v1.yaml"
+#USB0:
+#  _add:
+#    _clusters:
+#      EP_RMW%s:
+#        dim: 16
+#        dimIncrement: 4
+#        dimIndex: 0-15
+#        description: "RMW EP Status"
+#        addressOffset: 0x40
+#        registers:
+#          OUTCLR:
+#            description: "Endpoint n OUT Status Clear"
+#            addressOffset: 0x00
+#            access: write-only
+#            fields:
+#              TOGGLE:
+#                description: "Data Toggle"
+#                bitOffset: 0
+#                bitWidth: 1
+#              BUSNACK:
+#                description: "Data buffer NAK"
+#                bitOffset: 1
+#                bitWidth: 1
+#              STALLED:
+#                description: "EP Stalled"
+#                bitOffset: 3
+#                bitWidth: 1
+#              EPSETUP:
+#                description: "EP Setup Complete"
+#                bitOffset: 4
+#                bitWidth: 1
+#              TRNCOMPL:
+#                description: "Transaction Complete"
+#                bitOffset: 5
+#                bitWidth: 1
+#              UNFOVF:
+#                description: "Underflow/Overflow EP"
+#                bitOffset: 6
+#                bitWidth: 1
+#              CRC:
+#                description: "CRC Error"
+#                bitOffset: 7
+#                bitWidth: 1
+#          OUTSET:
+#            description: "Endpoint n OUT Status Clear"
+#            addressOffset: 0x01
+#            access: write-only
+#            fields:
+#              TOGGLE:
+#                description: "Data Toggle"
+#                bitOffset: 0
+#                bitWidth: 1
+#              BUSNACK:
+#                description: "Data buffer NAK"
+#                bitOffset: 1
+#                bitWidth: 1
+#              STALLED:
+#                description: "EP Stalled"
+#                bitOffset: 3
+#                bitWidth: 1
+#              EPSETUP:
+#                description: "EP Setup Complete"
+#                bitOffset: 4
+#                bitWidth: 1
+#              TRNCOMPL:
+#                description: "Transaction Complete"
+#                bitOffset: 5
+#                bitWidth: 1
+#              UNFOVF:
+#                description: "Underflow/Overflow EP"
+#                bitOffset: 6
+#                bitWidth: 1
+#              CRC:
+#                description: "CRC Error"
+#                bitOffset: 7
+#                bitWidth: 1
+#          INCLR:
+#            description: "Endpoint n OUT Status Clear"
+#            addressOffset: 0x02
+#            access: write-only
+#            fields:
+#              TOGGLE:
+#                description: "Data Toggle"
+#                bitOffset: 0
+#                bitWidth: 1
+#              BUSNACK:
+#                description: "Data buffer NAK"
+#                bitOffset: 1
+#                bitWidth: 1
+#              STALLED:
+#                description: "EP Stalled"
+#                bitOffset: 3
+#                bitWidth: 1
+#              EPSETUP:
+#                description: "EP Setup Complete"
+#                bitOffset: 4
+#                bitWidth: 1
+#              TRNCOMPL:
+#                description: "Transaction Complete"
+#                bitOffset: 5
+#                bitWidth: 1
+#              UNFOVF:
+#                description: "Underflow/Overflow EP"
+#                bitOffset: 6
+#                bitWidth: 1
+#              CRC:
+#                description: "CRC Error"
+#                bitOffset: 7
+#                bitWidth: 1
+#          INSET:
+#            description: "Endpoint n OUT Status Clear"
+#            addressOffset: 0x03
+#            access: write-only
+#            fields:
+#              TOGGLE:
+#                description: "Data Toggle"
+#                bitOffset: 0
+#                bitWidth: 1
+#              BUSNACK:
+#                description: "Data buffer NAK"
+#                bitOffset: 1
+#                bitWidth: 1
+#              STALLED:
+#                description: "EP Stalled"
+#                bitOffset: 3
+#                bitWidth: 1
+#              EPSETUP:
+#                description: "EP Setup Complete"
+#                bitOffset: 4
+#                bitWidth: 1
+#              TRNCOMPL:
+#                description: "Transaction Complete"
+#                bitOffset: 5
+#                bitWidth: 1
+#              UNFOVF:
+#                description: "Underflow/Overflow EP"
+#                bitOffset: 6
+#                bitWidth: 1
+#              CRC:
+#                description: "CRC Error"
+#                bitOffset: 7
+#                bitWidth: 1
+##  _cluster:
+##    "RMWSTATUS0":
+##      description
+##      OUTCLR: {name: test}
+##      OUTSET: {}
+#
+#      
+##USB0:
+#  #_array:
+#
+#
+##  _cluster:
+##    TEST_TEST%s:
+##      OUTCLR?:
+##        description: "Endpoint n OUT Status Clear"
+##        addressOffset: 0x40
+##        access: write-only
+##        fields:
+##          TOGGLE:
+##            description: "Data Toggle"
+##            bitOffset: 0
+##            bitWidth: 1
+##          BUSNACK:
+##            description: "Data buffer NAK"
+##            bitOffset: 1
+##            bitWidth: 1
+##          STALLED:
+##            description: "EP Stalled"
+##            bitOffset: 3
+##            bitWidth: 1
+##          EPSETUP:
+##            description: "EP Setup Complete"
+##            bitOffset: 4
+##            bitWidth: 1
+##          TRNCOMPL:
+##            description: "Transaction Complete"
+##            bitOffset: 5
+##            bitWidth: 1
+##          UNFOVF:
+##            description: "Underflow/Overflow EP"
+##            bitOffset: 6
+##            bitWidth: 1
+##          CRC:
+##            description: "CRC Error"
+##            bitOffset: 7
+##            bitWidth: 1
+##      OUTSET:
+##        description: "Endpoint n OUT Status Clear"
+##        addressOffset: 0x41
+##        access: write-only
+##        fields:
+##          TOGGLE:
+##            description: "Data Toggle"
+##            bitOffset: 0
+##            bitWidth: 1
+##          BUSNACK:
+##            description: "Data buffer NAK"
+##            bitOffset: 1
+##            bitWidth: 1
+##          STALLED:
+##            description: "EP Stalled"
+##            bitOffset: 3
+##            bitWidth: 1
+##          EPSETUP:
+##            description: "EP Setup Complete"
+##            bitOffset: 4
+##            bitWidth: 1
+##          TRNCOMPL:
+##            description: "Transaction Complete"
+##            bitOffset: 5
+##            bitWidth: 1
+##          UNFOVF:
+##            description: "Underflow/Overflow EP"
+##            bitOffset: 6
+##            bitWidth: 1
+##          CRC:
+##            description: "CRC Error"
+##            bitOffset: 7
+##            bitWidth: 1
+##      INCLR:
+##        description: "Endpoint n OUT Status Clear"
+##        addressOffset: 0x42
+##        access: write-only
+##        fields:
+##          TOGGLE:
+##            description: "Data Toggle"
+##            bitOffset: 0
+##            bitWidth: 1
+##          BUSNACK:
+##            description: "Data buffer NAK"
+##            bitOffset: 1
+##            bitWidth: 1
+##          STALLED:
+##            description: "EP Stalled"
+##            bitOffset: 3
+##            bitWidth: 1
+##          EPSETUP:
+##            description: "EP Setup Complete"
+##            bitOffset: 4
+##            bitWidth: 1
+##          TRNCOMPL:
+##            description: "Transaction Complete"
+##            bitOffset: 5
+##            bitWidth: 1
+##          UNFOVF:
+##            description: "Underflow/Overflow EP"
+##            bitOffset: 6
+##            bitWidth: 1
+##          CRC:
+##            description: "CRC Error"
+##            bitOffset: 7
+##            bitWidth: 1
+##      INSET:
+##        description: "Endpoint n OUT Status Clear"
+##        addressOffset: 0x43
+##        access: write-only
+##        fields:
+##          TOGGLE:
+##            description: "Data Toggle"
+##            bitOffset: 0
+##            bitWidth: 1
+##          BUSNACK:
+##            description: "Data buffer NAK"
+##            bitOffset: 1
+##            bitWidth: 1
+##          STALLED:
+##            description: "EP Stalled"
+##            bitOffset: 3
+##            bitWidth: 1
+##          EPSETUP:
+##            description: "EP Setup Complete"
+##            bitOffset: 4
+##            bitWidth: 1
+##          TRNCOMPL:
+##            description: "Transaction Complete"
+##            bitOffset: 5
+##            bitWidth: 1
+##          UNFOVF:
+##            description: "Underflow/Overflow EP"
+##            bitOffset: 6
+##            bitWidth: 1
+##          CRC:
+##            description: "CRC Error"
+##            bitOffset: 7
+##            bitWidth: 1
+##
